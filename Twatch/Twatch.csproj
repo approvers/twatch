@@ -5,6 +5,10 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    </PropertyGroup>
+
     <ItemGroup>
       <PackageReference Include="CoreTweet" Version="1.0.0.483" />
       <PackageReference Include="Discord.Net.Webhook" Version="2.3.1" />
