@@ -23,7 +23,9 @@ namespace Twatch.Service.Twitter
                 .Streaming
                 .Filter(track: _keyword)
                 .OfType<StatusMessage>()
-                .Select(message => new TwitterMessage(message.Status))
+                .Select(message => message.Status)
+                .Where(status => status.RetweetedStatus is null)
+                .Select(status => new TwitterMessage(status))
             ;
         }
     }
